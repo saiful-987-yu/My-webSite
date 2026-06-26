@@ -6,7 +6,7 @@ gsap.registerPlugin(ScrollTrigger);
 let mm = gsap.matchMedia();
 
 // স্ক্রিনের চওড়া ১০২৫ পিক্সেল বা তার বেশি হলে (যেমন: ল্যাপটপ ও ডেক্সটপ) এই কোড চলবে
-mm.add("(min-width: 1025px)", () => {
+mm.add("(min-width: 769px)", () => {
   
   // একটি টাইমলাইন তৈরি করলাম যাতে অ্যানিমেশনগুলো একটার পর একটা সিরিয়ালে চলে
   let tl = gsap.timeline({
