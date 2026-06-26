@@ -1,0 +1,244 @@
+  /* বেসিক রিসেট */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: #e0e5ec;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+/* --- ল্যাপটপ ভার্সন (Default Big Screen Styling) --- */
+
+  .box1 {
+    height: 3cm;
+    width: 2cm;
+    background-color: #fff;
+    border-radius: 20%;
+  }
+/* হিরো বা হোম সেকশন */
+.hero-section {
+    background: linear-gradient(135px, #2c3e50, #1abc9c);
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.hero-content span {
+    color: #ffeaa7;
+}
+
+.hero-content p {
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background-color: #fff;
+    color: #2c3e50;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #2c3e50;
+    color: #fff;
+}
+
+/* সাধারণ সেকশন স্টাইল */
+section {
+    padding: 100px 40px 80px 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+    color: #2c3e50;
+}
+
+.section-desc {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+/* স্কিল লিস্ট */
+.skills-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skills-list li {
+    background-color: #2c3e50;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-size: 16px;
+}
+
+/* শখ সেকশন (ল্যাপটপে ৪টা কলামে পাশাপাশি বসবে) */
+.hobbies-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* ল্যাপটপে ৪ কলাম */
+    gap: 20px;
+}
+
+.hobby-item {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.hobby-icon {
+    font-size: 40px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* কন্টাক্ট ও ফুটার */
+.contact-info p {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+footer {
+    background-color: #1a252f;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+
+/* =======================================================
+   ৩. ট্যাবলেটের জন্য রেসপন্সিভ ডিজাইন (Tablet View - Screen width 768px বা তার নিচে)
+   ======================================================= */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 38px;
+    }
+    
+    .hero-content p {
+        font-size: 18px;
+    }
+
+    /* ল্যাপটপের ৪ কলাম ট্যাবে এসে ২ কলাম হয়ে যাবে */
+    .hobbies-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =======================================================
+   ৪. মোবাইল ফোনের জন্য রেসপন্সিভ ডিজাইন (Mobile View - Screen width 480px বা তার নিচে)
+   ======================================================= */
+@media (max-width: 480px) {
+
+    section {
+        padding: 80px 20px 40px 20px; /* ফোনের সাইড স্পেস কমানো হয়েছে */
+    }
+
+    .hero-content h1 {
+        font-size: 28px; /* ফোনের জন্য লেখার সাইজ ছোট করা হয়েছে */
+    }
+
+    .hero-content p {
+        font-size: 15px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+    
+
+    /* ফোনে শখের আইটেমগুলোও একটার নিচে আরেকটা আসবে */
+    .hobbies-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-info p {
+        font-size: 16px; /* ফোনের কন্টাক্ট টেক্সট ছোট করা হয়েছে */
+    }
+}
+
+
+/* ============================================
+বেসিক রিসেট (Basic Reset) - সব ব্রাউজারের ডিফল্ট মার্জিন-প্যাডিং দূর করতে */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* উইডথ ও প্যাডিং ঠিক রাখার জন্য */
+  scroll-behavior: smooth; /* স্মুথ স্ক্রোলিং এর জন্য */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  overflow-x: hidden; /* ডানে-বামে যেন স্ক্রোলবার না আসে */
+  /*background-color: #111; /* আপনার থিম অনুযায়ী পরিবর্তন করতে পারেন 
+  color: #fff;*/
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* =========================================
+রেসপন্সিভ মিডিয়া কুয়েরি (Responsive Media Queries) */
+
+/* মোবাইল স্ক্রিন (সর্বোচ্চ 480px পিক্সেল পর্যন্ত স্ক্রিনের জন্য) */
+@media (max-width: 480px) {
+  /* এখানে মোবাইলের সিএসএস লিখবেন */
+  body { font-size: 14px; }
+}
+
+/* ট্যাবলেট স্ক্রিন (481px থেকে 768px পিক্সেল পর্যন্ত) */
+@media (min-width: 481px) and (max-width: 768px) {
+    
+  /* এখানে ট্যাবলেটের সিএসএস লিখবেন */
+}
+
+/* ল্যাপটপ/ছোট কম্পিউটার স্ক্রিন (769px থেকে 1024px পিক্সেল পর্যন্ত) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* এখানে সাধারণ ল্যাপটপের সিএসএস লিখবেন */
+}
+
+/* বড় ডেক্সটপ স্ক্রিন (1025px থেকে 1440px পিক্সেল পর্যন্ত) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  /* এখানে রেগুলার ডেক্সটপের সিএসএস লিখবেন */
+}
+
+/* আল্ট্রা-ওয়াইড বা হাই ম্যাক্স স্ক্রিন (1441px পিক্সেলের ওপরের স্ক্রিনের জন্য) */
+@media (min-width: 1441px) {
+  /* এখানে অনেক বড় মনিটর বা ৪কে স্ক্রিনের সিএসএস লিখবেন */
+}

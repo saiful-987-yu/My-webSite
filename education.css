@@ -1,0 +1,100 @@
+/* এডুকেশন সেকশন (ল্যাপটপে পাশাপাশি ৩টা কার্ড দেখাবে) */
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* ল্যাপটপে ৩ কলাম */
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.edu-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-top: 5px solid #1abc9c;
+}
+
+.edu-card h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.institute {
+    color: #7f8c8d;
+    font-size: 15px;
+}
+
+.year {
+    font-weight: bold;
+    color: #1abc9c;
+    margin-top: 10px;
+}
+
+  #education h2, span {
+      font-size: 32px;
+  }
+/* ============================================
+বেসিক রিসেট (Basic Reset) - সব ব্রাউজারের ডিফল্ট মার্জিন-প্যাডিং দূর করতে */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* উইডথ ও প্যাডিং ঠিক রাখার জন্য */
+  scroll-behavior: smooth; /* স্মুথ স্ক্রোলিং এর জন্য */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  overflow-x: hidden; /* ডানে-বামে যেন স্ক্রোলবার না আসে */
+  /*background-color: #111; /* আপনার থিম অনুযায়ী পরিবর্তন করতে পারেন *
+  color: #fff;*/
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* =========================================
+রেসপন্সিভ মিডিয়া কুয়েরি (Responsive Media Queries) */
+
+/* মোবাইল স্ক্রিন (সর্বোচ্চ 480px পিক্সেল পর্যন্ত স্ক্রিনের জন্য) */
+@media (max-width: 480px) {
+    /* ফোনে কার্ডগুলো একটার নিচে আরেকটা চলে আসবে (১টা কলাম) */
+    .education-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ট্যাবলেট স্ক্রিন (481px থেকে 768px পিক্সেল পর্যন্ত) */
+@media (min-width: 481px) and (max-width: 768px) {
+    /* কার্ডগুলো ট্যাবে এসে ২ কলাম হয়ে যাবে */
+    .education-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    /* ৩ নম্বর কার্ডটিকে (শেষের কার্ড) পুরো ২ কলাম জুড়ে সেন্টারে বড় দেখানোর জন্য */
+    .education-grid .edu-card:nth-child(3) {
+        grid-column: span 2;
+    }
+}
+
+/* ল্যাপটপ/ছোট কম্পিউটার স্ক্রিন (769px থেকে 1024px পিক্সেল পর্যন্ত) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* এখানে সাধারণ ল্যাপটপের সিএসএস লিখবেন */
+}
+
+/* বড় ডেক্সটপ স্ক্রিন (1025px থেকে 1440px পিক্সেল পর্যন্ত) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  /* এখানে রেগুলার ডেক্সটপের সিএসএস লিখবেন */
+}
+
+/* আল্ট্রা-ওয়াইড বা হাই ম্যাক্স স্ক্রিন (1441px পিক্সেলের ওপরের স্ক্রিনের জন্য) */
+@media (min-width: 1441px) {
+  /* এখানে অনেক বড় মনিটর বা ৪কে স্ক্রিনের সিএসএস লিখবেন */
+}
